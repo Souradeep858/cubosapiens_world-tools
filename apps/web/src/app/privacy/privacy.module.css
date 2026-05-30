@@ -1,56 +1,66 @@
 .privacyPage {
-  background: #050816;
-  color: white;
   min-height: 100vh;
   padding: 6rem 2rem;
+  color: white;
+  background:
+    radial-gradient(circle at top, rgba(158,255,58,0.04), transparent 35%),
+    #000;
 }
+
 
 .privacyHero {
   text-align: center;
   max-width: 900px;
-  margin: auto;
-  margin-bottom: 5rem;
+  margin: 0 auto 5rem;
 }
 
 .heroBadge {
   display: inline-block;
-  padding: 0.55rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 999px;
-  background: rgba(124, 58, 237, 0.15);
-  color: #c084fc;
-  margin-bottom: 1.5rem;
+  background: rgba(158,255,58,0.08);
+  border: 1px solid rgba(158,255,58,0.15);
+  color: #9EFF3A;
   font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .privacyHero h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: white;
   margin-bottom: 1rem;
 }
 
 .privacyHero p {
-  color: rgba(255,255,255,0.72);
-  max-width: 650px;
+  max-width: 700px;
   margin: auto;
+  color: rgba(255,255,255,0.7);
   line-height: 1.8;
+  font-size: 1.1rem;
 }
 
 .heroMeta {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 2rem;
-  flex-wrap: wrap;
 }
 
 .heroMeta span {
-  background: rgba(255,255,255,0.05);
+  background: #101010;
+  border: 1px solid #232323;
   padding: 0.8rem 1rem;
   border-radius: 14px;
 }
 
+
 .summaryGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
   gap: 1.5rem;
   max-width: 1200px;
   margin: auto;
@@ -58,16 +68,42 @@
 }
 
 .summaryCard {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: #101010;
+  border: 1px solid #232323;
   border-radius: 24px;
   padding: 2rem;
+  transition: all 0.25s ease;
+}
+
+.summaryCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(158,255,58,0.35);
 }
 
 .summaryIcon {
-  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: rgba(158,255,58,0.08);
+  border: 1px solid rgba(158,255,58,0.15);
+  color: #9EFF3A;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-bottom: 1rem;
 }
+
+.summaryCard h3 {
+  margin-bottom: 0.75rem;
+}
+
+.summaryCard p {
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+}
+
 
 .privacyLayout {
   display: grid;
@@ -77,6 +113,7 @@
   margin: auto;
 }
 
+
 .privacySidebar {
   position: sticky;
   top: 100px;
@@ -84,17 +121,30 @@
 }
 
 .sidebarCard {
-  background: rgba(255,255,255,0.04);
+  background: #101010;
+  border: 1px solid #232323;
   border-radius: 24px;
   padding: 1.5rem;
 }
 
+.sidebarCard h4 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
 .sidebarCard a {
   display: block;
-  margin-top: 1rem;
-  color: rgba(255,255,255,0.75);
+  padding: 0.75rem 0;
   text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  transition: all 0.2s ease;
 }
+
+.sidebarCard a:hover {
+  color: #9EFF3A;
+  padding-left: 6px;
+}
+
 
 .privacyContent {
   display: flex;
@@ -103,9 +153,16 @@
 }
 
 .contentCard {
-  background: rgba(255,255,255,0.04);
+  background: #101010;
+  border: 1px solid #232323;
   border-radius: 28px;
   padding: 2rem;
+  transition: all 0.25s ease;
+}
+
+.contentCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(158,255,58,0.35);
 }
 
 .contentTop {
@@ -115,19 +172,37 @@
 }
 
 .contentNumber {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
+
   border-radius: 14px;
-  background: linear-gradient(135deg,#7c3aed,#ec4899);
+
+  background: rgba(158,255,58,0.08);
+  border: 1px solid rgba(158,255,58,0.15);
+
+  color: #9EFF3A;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contentCard h2 {
+  margin-bottom: 0.35rem;
 }
 
 .sectionSubtitle {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.5);
 }
+
+.contentCard p {
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+}
+
 
 .featureList {
   display: grid;
@@ -136,10 +211,24 @@
 }
 
 .featureItem {
-  background: rgba(255,255,255,0.03);
-  padding: 1.3rem;
+  background: #141414;
+  border: 1px solid #232323;
+  padding: 1.25rem;
   border-radius: 18px;
 }
+
+.featureTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
+  color: #9EFF3A;
+}
+
+.featureItem p {
+  margin: 0;
+}
+
 
 .permissionsGrid {
   display: grid;
@@ -149,49 +238,76 @@
 }
 
 .permissionCard {
-  background: rgba(255,255,255,0.03);
-  padding: 2rem;
+  background: #141414;
+  border: 1px solid #232323;
   border-radius: 20px;
+  padding: 2rem;
   text-align: center;
+  transition: all 0.25s ease;
 }
 
-.permissionCard span {
-  font-size: 2rem;
+.permissionCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(158,255,58,0.35);
 }
+
+.permissionCard svg {
+  color: #9EFF3A;
+  margin-bottom: 1rem;
+}
+
+.permissionCard h4 {
+  margin: 0;
+}
+
 
 .rightsBanner {
   margin-top: 1.5rem;
-  padding: 1.2rem;
+  padding: 1.25rem;
   border-radius: 18px;
-  background: linear-gradient(135deg,#7c3aed,#ec4899);
+
+  background: rgba(158,255,58,0.08);
+  border: 1px solid rgba(158,255,58,0.15);
+
+  color: #9EFF3A;
 }
+
 
 .privacyContact {
   max-width: 1200px;
-  margin: auto;
-  margin-top: 5rem;
+  margin: 5rem auto 0;
   text-align: center;
+
   padding: 4rem 2rem;
+
+  background: #101010;
+  border: 1px solid #232323;
+
   border-radius: 32px;
-  background: linear-gradient(135deg,#7c3aed,#ec4899);
 }
 
 .privacyContact h2 {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .privacyContact p {
-  margin: 1rem 0;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 1rem;
 }
 
 .privacyContact a {
-  color: white;
+  color: #9EFF3A;
   font-weight: 700;
   text-decoration: none;
 }
 
-@media (max-width: 900px) {
+.privacyContact a:hover {
+  text-decoration: underline;
+}
 
+
+@media (max-width: 900px) {
   .privacyLayout {
     grid-template-columns: 1fr;
   }
@@ -204,5 +320,18 @@
   .privacyHero h1 {
     font-size: 3rem;
   }
+}
 
+@media (max-width: 600px) {
+  .privacyPage {
+    padding: 4rem 1rem;
+  }
+
+  .privacyHero h1 {
+    font-size: 2.3rem;
+  }
+
+  .privacyContact h2 {
+    font-size: 2rem;
+  }
 }
